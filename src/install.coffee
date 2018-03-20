@@ -386,7 +386,10 @@ class Install extends Command
     for name, version of @getPackageDependencies()
       do (name, version) =>
         commands.push (next) =>
-          @installRegisteredPackage({name, version}, options, next)
+          if name.indexOf("git://") isnt -1
+            @installGitPackage(name, options, next)
+          else
+            @installRegisteredPackage({name, version}, options, next)
 
     async.series(commands, callback)
 
