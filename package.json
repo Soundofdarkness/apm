@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/atom/apm.git"
+    "url": "https://github.com/Soundofdarkness/apm"
   },
   "bugs": {
     "url": "https://github.com/atom/apm/issues"
